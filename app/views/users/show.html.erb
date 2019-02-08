@@ -1,0 +1,15 @@
+<% provide(:title, @user.name) %>
+
+<% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %><% end %>
+
+<div class = "row">
+    <aside class = "col-md-4">
+        <section class = "user-info">
+            <h1>
+                <%= gravatar_for @user %>
+                <%= @user.name %>
+            </h1>
+        </section>
+    </aside>
+</div>
